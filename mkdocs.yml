@@ -1,0 +1,50 @@
+#mkdocs.yml
+site_name: Valdoni Documentações
+#Tema do mkdocs/ Utilizar tab somente em alguns linhas e o resto é no space
+theme:
+  name: material
+  logo: img/15-anos.png
+  font:
+    text: Roboto
+#
+  features:
+    - navigation.top  
+    - toc.follow
+    - navigation.instant
+    - navigation.tracking
+   # - navigation.expand
+    - navigation.prune
+#
+  plugins:
+    - tags
+#
+  palette:
+  - scheme: default
+    primary: blue grey
+    toggle:
+      icon: material/weather-night
+      name: Modo noturno
+  - scheme: slate
+    primary: blue grey
+    toggle:
+      icon: material/weather-sunny
+      name: Modo claro
+
+markdown_extensions:
+  - toc:
+      title: Índices
+  
+  - pymdownx.tasklist # Suporte a Lista de Tarefas
+  - pymdownx.emoji # Suporte a Emojis
+  - pymdownx.mark # Suporte a Marcações
+  - pymdownx.tilde # Suporte a Tachado
+  - pymdownx.highlight
+  - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+extra_css:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
